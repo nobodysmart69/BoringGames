@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gary's Boring Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="gary.png" alt="Gary the Snail" class="header-img">
+        <h1>Gary's Boring Games</h1>
+        <p>Meow at Snail Speed, Game On!</p>
+        <nav>
+            <a href="#home" class="nav-btn">Home</a>
+            <a href="#games" class="nav-btn">Games</a>
+            <a href="#community" class="nav-btn">Community</a>
+            <a href="#about" class="nav-btn">About</a>
+        </nav>
+        <div class="game-marquee">
+            <span>🐌 Made By You! By The Memes For The Memes! 🐌</span>
+        </div>
+    </header>
+    <main id="games">
+        <section class="game-list">
+            <h2>Snldiers Community Games</h2>
+            <div class="game-grid">
+                <div class="game-card">
+                    <img src="artchick.png" alt="Icon for Artchik's Fuk Yu Higher" class="game-icon">
+                    <div class="snail-shell"></div>
+                    <h3>Artchik's Fuk Yu Higher</h3>
+                    <p>Blast scums with slimy precision!</p>
+                    <a href="https://nobodysmart69.github.io/artchick-fuck-you-higher/" class="play-btn">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="froth.png" alt="Icon for Frothless Frenzy" class="game-icon">
+                    <div class="snail-shell"></div>
+                    <h3>Frothless Frenzy</h3>
+                    <p>Help Gary and Frothless blast away their shillers!</p>
+                    <a href="https://nobodysmart69.github.io/artchick-fuck-you-higher/" class="play-btn">Play Now</a>
+                </div>
+            </div>
+        </section>
+        <section class="community" id="community">
+            <h2>Join the Snail Community</h2>
+            <p>Discuss games, share tips, and connect with other snail gamers on X!</p>
+            <a href="https://t.co/fByuzsmT9b" target="_blank" class="community-btn">Join Now</a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Gary’s Snail-Tastic Hub. All rights meow-served.</p>
+        <button class="scroll-top">Back to Top 🐌</button>
+    </footer>
+    <!-- Bubble Animation Elements with Varied Durations -->
+    <div class="bubble" style="left: 10%; animation-delay: 0s; animation-duration: 4s;"></div>
+    <div class="bubble" style="left: 30%; animation-delay: 1s; animation-duration: 6s; width: 25px; height: 25px;"></div>
+    <div class="bubble" style="left: 50%; animation-delay: 2s; animation-duration: 5s; width: 40px; height: 40px;"></div>
+    <div class="bubble" style="left: 70%; animation-delay: 3s; animation-duration: 7s;"></div>
+    <div class="bubble" style="left: 90%; animation-delay: 4s; animation-duration: 4.5s; width: 30px; height: 30px;"></div>
+    <!-- Additional Decorative Elements -->
+    <div class="snail-trail"></div>
+    <div class="snail-trail extra-trail"></div>
+    <div class="jellyfish"></div>
+    <div class="fish" style="top: 20%;" aria-hidden="true"></div>
+    <div class="fish" style="top: 50%; animation-delay: 2s;" aria-hidden="true"></div>
+    <div class="fish" style="top: 80%; animation-delay: 4s;" aria-hidden="true"></div>
+    <script>
+        document.querySelector('.scroll-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

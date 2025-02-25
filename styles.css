@@ -1,0 +1,297 @@
+/* General Styles */
+body {
+    font-family: 'Chewy', cursive;
+    background: linear-gradient(to bottom, #6a1b9a, #0288d1); /* Purple to blue gradient matching logo */
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    background: #4a148c; /* Dark purple */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #ab47bc; /* Purple border */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(171, 71, 188, 0.9);
+}
+.header-img {
+    width: 80px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    animation: wobbleGary 2s infinite ease-in-out, glowShell 3s infinite;
+}
+header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: #fff;
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #ab47bc; /* Blue and purple glow */
+}
+header p {
+    font-size: 1.2em;
+    margin: 0;
+}
+nav {
+    margin-top: 10px;
+}
+.nav-btn {
+    background: #00e5ff; /* Blue */
+    color: #fff;
+    padding: 8px 16px;
+    margin: 0 5px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s, transform 0.3s;
+}
+.nav-btn:hover {
+    background: #ab47bc; /* Purple on hover */
+    transform: scale(1.1);
+}
+.game-marquee {
+    background: #ab47bc; /* Purple */
+    padding: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.game-marquee span {
+    font-size: 1em;
+    color: #fff;
+    white-space: nowrap;
+    animation: marqueeSlide 10s infinite linear;
+}
+
+/* Game List Styles */
+.game-list {
+    padding: 30px 15px;
+    text-align: center;
+}
+.game-list h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    color: #ab47bc;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #ab47bc; /* Blue and purple glow */
+}
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.game-card {
+    background: #4a558e; /* Medium blue */
+    border: 3px solid #ab47bc; /* Purple border */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(171, 71, 188, 0.6);
+}
+.game-icon {
+    width: 40px;
+    margin-bottom: 10px;
+}
+.game-card h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.1em;
+    color: #fff;
+    margin: 10px 0;
+}
+.game-card p {
+    font-size: 0.9em;
+    color: #e0f7fa;
+    margin: 0 0 10px;
+}
+.play-btn {
+    background: #00e5ff; /* Blue */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+.play-btn:hover {
+    background: #ab47bc; /* Purple on hover */
+}
+
+/* Community Section */
+.community {
+    padding: 20px;
+    text-align: center;
+}
+.community h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    color: #ab47bc;
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #ab47bc; /* Blue and purple glow */
+}
+.community p {
+    font-size: 1em;
+    color: #e0f7fa;
+}
+.community-btn {
+    background: #00e5ff; /* Blue */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+.community-btn:hover {
+    background: #ab47bc; /* Purple on hover */
+}
+
+/* Footer Styles */
+footer {
+    background: #4a148c; /* Dark purple */
+    padding: 15px;
+    text-align: center;
+    border-top: 4px solid #ab47bc; /* Purple border */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer p {
+    font-size: 0.9em;
+    margin: 0;
+}
+.scroll-top {
+    background: #00e5ff; /* Blue */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.scroll-top:hover {
+    background: #ab47bc; /* Purple on hover */
+}
+
+/* Bubble Animation */
+.bubble {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 229, 255, 0.7); /* Blue bubbles */
+    border-radius: 50%;
+    animation: rise 5s infinite linear;
+    z-index: -1;
+    pointer-events: none;
+    will-change: transform, opacity; /* Performance optimization */
+}
+@keyframes rise {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    25% {
+        transform: translateY(-25vh) translateX(10px);
+    }
+    50% {
+        transform: translateY(-50vh) translateX(0);
+    }
+    75% {
+        transform: translateY(-75vh) translateX(-10px);
+    }
+    100% {
+        transform: translateY(-100vh) translateX(0);
+        opacity: 0;
+    }
+}
+
+/* Additional Animations */
+@media (prefers-reduced-motion: no-preference) {
+    .snail-trail {
+        position: absolute;
+        width: 100px;
+        height: 10px;
+        background: rgba(171, 71, 188, 0.5); /* Purple trail */
+        border-radius: 50%;
+        animation: snailCrawl 8s infinite ease-in-out;
+    }
+    .snail-trail:nth-child(1) { top: 25%; left: 0; }
+    .extra-trail { top: 75%; left: 50%; animation-delay: 4s; }
+    .jellyfish {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: url('jellyfish.png') no-repeat center;
+        background-size: contain;
+        top: 60%;
+        left: 85%;
+        animation: jellyFloat 5s infinite ease-in-out;
+    }
+    .fish {
+        position: absolute;
+        width: 50px;
+        height: 30px;
+        background: url('fish.png') no-repeat center;
+        background-size: contain;
+        animation: swim 10s infinite linear;
+    }
+}
+@keyframes snailCrawl {
+    0% { transform: translateX(-100%); opacity: 0; }
+    50% { transform: translateX(50vw); opacity: 1; }
+    100% { transform: translateX(100vw); opacity: 0; }
+}
+@keyframes jellyFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+@keyframes swim {
+    0% { left: -50px; }
+    100% { left: 100%; }
+}
+@keyframes wobbleGary {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+@keyframes glowShell {
+    0%, 100% { box-shadow: 0 0 10px #ab47bc; } /* Purple glow */
+    50% { box-shadow: 0 0 20px #00e5ff; } /* Blue glow */
+}
+@keyframes marqueeSlide {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+    header h1 {
+        font-size: 1.5em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .bubble {
+        width: 15px;
+        height: 15px;
+        animation-duration: 3s !important;
+    }
+    .nav-btn {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+}
